@@ -4,7 +4,7 @@
 * William Estupiñan
 * Sebastian Suns
 * Mariana Monroy 
-* Diego Andrés Moreno 
+* Diego Moreno 
 
 ## 🎯 Descripción
 Un portal web de noticias y comunicados dedicado al Centro de Gestión de Mercados y Tecnología de la Información. Su objetivo principal es brindar apoyo centralizado y difundir la información requerida por instructores, aprendices y personal administrativo del centro de formación.
