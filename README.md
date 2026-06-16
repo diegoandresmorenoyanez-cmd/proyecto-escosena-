@@ -32,7 +32,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 ### 1. Clonar el repositorio
 ```bash
 git clone [https://github.com/](https://github.com/)[usuario]/[repositorio].git
-cd [nombre-del-repositorio]
+cd [proyecto-escosena]
 git clone [https://github.com/](https://github.com/)[usuario]/[repositorio].git
 
 2. Configurar la Base de Datos (MySQL)
