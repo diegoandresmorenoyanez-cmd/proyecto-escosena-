@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); // Nuestra conexión a MySQL
+const db = require('../config/db');
 
 // 1. RUTA: POST /api/noticias (Para guardar una noticia nueva)
 router.post('/', async (req, res) => {

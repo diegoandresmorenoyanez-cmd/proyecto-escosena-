@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); // Importamos la conexión a MySQL
+const db = require('../config/db');
 
 // RUTA: POST /api/auth/login
 router.post('/login', async (req, res) => {

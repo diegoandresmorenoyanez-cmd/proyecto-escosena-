@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const db = require('./db'); 
+const db = require('./config/db');
 const authRoutes = require('./routes/auth');
 const noticiasRoutes = require('./routes/noticias'); // 1. Importar rutas de noticias
 
