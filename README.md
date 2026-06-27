@@ -1,10 +1,11 @@
+Markdown
 📦 Portal Web Informativo - Centro de Gestión de Mercados y TI
 
 👥 Integrantes
 * William Estupiñan
 * Sebastian Suns
 * Mariana Monroy
-* Diego Moreno
+* Diego Andrés Moreno
 
 🎯 Descripción
 Un portal web de noticias y comunicados dedicado al Centro de Gestión de Mercados y Tecnología de la Información. Su objetivo principal es brindar apoyo centralizado y difundir la información requerida por instructores, aprendices y personal administrativo del centro de formación.
@@ -26,15 +27,12 @@ El proyecto está dividido en dos partes principales:
 * `/frontend`: Aplicación cliente desarrollada en React.
 
 🚀 Instalación y Configuración Local
-
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ### 1. Clonar el repositorio
 ```bash
 git clone [https://github.com/](https://github.com/)[usuario]/[repositorio].git
-cd [proyecto-escosena]
-git clone [https://github.com/](https://github.com/)[usuario]/[repositorio].git
-
+cd proyecto-escosena
 2. Configurar la Base de Datos (MySQL)
 Abre tu gestor de MySQL (XAMPP/phpMyAdmin o MySQL Workbench).
 
@@ -61,7 +59,6 @@ CREATE TABLE noticias (
     fecha_publicacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
-
 3. Configurar y arrancar el Backend
 Navega a la carpeta del backend:
 
@@ -71,7 +68,7 @@ Instala las dependencias del servidor:
 
 Bash
 npm install
-Crea un archivo .env en la raíz de la carpeta backend/ con las credenciales de tu MySQL local:
+Variables de entorno: Crea un archivo .env en la raíz de la carpeta backend/ basándote en el archivo de plantilla .env.example incluido en el repositorio. Coloca las credenciales de tu MySQL local:
 
 Fragmento de código
 DB_HOST=localhost
@@ -98,3 +95,85 @@ Inicia la aplicación de React:
 Bash
 npm start
 La aplicación se abrirá automáticamente en el navegador en la ruta http://localhost:3000.
+
+📡 Endpoints y Ejemplos JSON
+La API utiliza respuestas unificadas para facilitar la comunicación con el Frontend.
+
+POST /api/users/register
+Registra un nuevo usuario en el sistema.
+Request:
+
+JSON
+{
+  "nombre": "Carlos",
+  "correo": "carlos@gmail.com",
+  "password": "123456"
+}
+Response:
+
+JSON
+{
+  "success": true,
+  "message": "Usuario registrado",
+  "data": { "id": 1 },
+  "error": null
+}
+POST /api/users/login
+Autentica un usuario existente.
+Request:
+
+JSON
+{
+  "correo": "carlos@gmail.com",
+  "password": "123456"
+}
+Response:
+
+JSON
+{
+  "success": true,
+  "message": "Login exitoso",
+  "data": { "id": 1, "nombre": "Carlos", "rol": "Aprendiz" },
+  "error": null
+}
+GET /api/users
+Lista todos los usuarios.
+Response:
+
+JSON
+{
+  "success": true,
+  "message": "Usuarios listados",
+  "data": [
+    { "id": 1, "nombre": "Carlos", "correo": "carlos@gmail.com" }
+  ],
+  "error": null
+}
+PUT /api/users/:id
+Actualiza la información de un usuario.
+Request:
+
+JSON
+{
+  "nombre": "Carlos Actualizado"
+}
+Response:
+
+JSON
+{
+  "success": true,
+  "message": "Usuario actualizado",
+  "data": { "id": 1 },
+  "error": null
+}
+DELETE /api/users/:id
+Elimina un usuario del sistema.
+Response:
+
+JSON
+{
+  "success": true,
+  "message": "Usuario eliminado",
+  "data": null,
+  "error": null
+}
