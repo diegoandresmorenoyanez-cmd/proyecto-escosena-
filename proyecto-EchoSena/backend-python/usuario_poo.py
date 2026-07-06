@@ -87,6 +87,10 @@ if __name__ == "__main__":
     adminSena = AdministradorCgmti("Diego Moreno", "diego@sena.edu.co", "sena123", "Teleinformática")
     
     # 1. Prueba Fallida (Excepción)
+
+
+
+    
     iniciarSesionSistema(adminSena, "clave_incorrecta")
     
     print("-" * 40)
