@@ -62,6 +62,8 @@ class AdministradorCgmti(UsuarioSena):
 
 
 
+
+
 # ==========================================
 def iniciarSesionSistema(usuarioObjeto, passwordIngresado):
     print("\n--- Intentando iniciar sesión en el sistema CGMTI ---")
