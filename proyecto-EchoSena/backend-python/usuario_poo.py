@@ -18,11 +18,13 @@ class PersonaSistema(ABC):
 # 2. HERENCIA Y ENCAPSULACIÓN
 # ==========================================
 class UsuarioSena(PersonaSistema):
+
     def __init__(self, nombreUsuario, correoUsuario, passwordAcceso):
         super().__init__(nombreUsuario, correoUsuario)
         self.__passwordAcceso = passwordAcceso  # Atributo privado
 
-    # Métodos en lowerCamelCase como exige la lista de chequeo
+    
+    #Métodos en lowerCamelCase como exige la lista de chequeo
     def getPasswordAcceso(self):
         return self.__passwordAcceso
 
@@ -52,6 +54,9 @@ class AdministradorCgmti(UsuarioSena):
 
 # ==========================================
 # 4. MANEJO DE EXCEPCIONES
+
+
+
 # ==========================================
 def iniciarSesionSistema(usuarioObjeto, passwordIngresado):
     print("\n--- Intentando iniciar sesión en el sistema CGMTI ---")
