@@ -90,10 +90,13 @@ if __name__ == "__main__":
 
 
 
-    
+
     iniciarSesionSistema(adminSena, "clave_incorrecta")
     
     print("-" * 40)
     
     # 2. Prueba Exitosa (Polimorfismo)
+
+
+    
     iniciarSesionSistema(adminSena, "sena123")
