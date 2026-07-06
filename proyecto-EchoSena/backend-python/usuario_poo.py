@@ -41,6 +41,11 @@ class UsuarioSena(PersonaSistema):
 
 # ==========================================
 # 3. POLIMORFISMO
+
+
+
+
+
 # ==========================================
 class AdministradorCgmti(UsuarioSena):
     def __init__(self, nombreUsuario, correoUsuario, passwordAcceso, areaDependencia):
