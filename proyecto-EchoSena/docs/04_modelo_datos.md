@@ -10,6 +10,8 @@ MODELO DE DATOS - PORTAL CGMTI
    - Una Noticia recibe 0 a muchos Comentarios (1:N).
    - Un Usuario escribe 0 a muchos Comentarios (1:N).
 
+   
+
 3. Normalización:
    El modelo cumple con la Tercera Forma Normal (3FN):
    - 1FN: Todos los atributos son atómicos (no hay listas en una sola celda).
